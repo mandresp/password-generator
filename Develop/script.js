@@ -16,7 +16,7 @@ function generatePassword() {
   if (userLength < 8 || userLength > 128) {
     alert("Password is not the right length");
     console.clear(userLength);
-    return " "
+    return ""
   }
   
   // This is the else when your chosen number meets the parameters
@@ -32,7 +32,7 @@ function generatePassword() {
     console.log(special);
 
     // This is a failsafe if no character types are selected
-    if (upperCase !== true && lowerCase !== true && numbers !== true &&  special !== true) {
+    if (upperCase === false && lowerCase === false && numbers === false &&  special === false) {
       alert("No character types selected");
       console.clear(userLength);
       return " "
