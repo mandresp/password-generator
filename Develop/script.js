@@ -11,36 +11,46 @@ function generatePassword() {
   if (userLength < 8 || userLength > 128) {
     alert("Password is not the right length");
     console.clear(userLength);
-    generatePassword();
+    return " "
   }
   
-  if (userLength >= 8 && userLength <= 128) {
+  else {
     var upperCase = confirm("Would you like upper case?");
+    console.log(upperCase);
     var lowerCase = confirm("Would you like lower case?");
+    console.log(lowerCase);
     var numbers = confirm("Would you like numbers?");
+    console.log(numbers);
     var special = confirm("Would you like special characters?");
+    console.log(special);
 
-    if (upperCase = true){
-      userArray = userArray.concat(upperCaseArr);
+    if (upperCase === true) {
+      userArray = userArray.concat(upperCaseArr)
     }
-    if (lowerCase = true){
+
+    if (lowerCase === true){
       userArray = userArray.concat(lowerCaseArr);
     }
-    if (numbers = true){
+
+    if (numbers === true){
       userArray = userArray.concat(numbersArr);
     }
-    if (special = true){
+
+    if (special === true){
       userArray = userArray.concat(specialArr);
     }
+
     console.log(userArray)
 
     var finalPassword = []
+
     for (let i = 0; i <= userLength; i++) {
       var randomIndex = Math.floor(Math.random() * userArray.length);
       console.log(randomIndex);
       finalPassword = finalPassword.concat(userArray[randomIndex])
       console.log(finalPassword)
     }
+
     finalPassword = finalPassword.join("");
     console.log(finalPassword);
     return finalPassword;
