@@ -10,10 +10,10 @@ Confirm lowercase
 Confirm special
 Confirm number
 
-Empty array of password-characters
-
 Check boolean values
     When true is selected add those characters to the array
+
+Empty array of password-characters
 
 Empty final array
     While i is less than user entered length
